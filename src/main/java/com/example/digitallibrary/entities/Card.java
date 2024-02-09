@@ -3,11 +3,9 @@ package com.example.digitallibrary.entities;
 import com.example.digitallibrary.enumeration.CardStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.UuidGenerator;
-import java.io.Serializable;
 import java.sql.Date;
 
 @Entity

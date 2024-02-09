@@ -6,10 +6,14 @@ import com.example.digitallibrary.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.NoSuchElementException;
+
 @Service
 public class StudentService {
 @Autowired
 StudentRepository studentRepository;
+
+
     public void create(StudentCreateRequest createRequest){
         Student student=createRequest.to();
         studentRepository.save(student);
@@ -17,6 +21,6 @@ StudentRepository studentRepository;
 
 
     public Student get(Integer id) {
-       return  this.studentRepository.findById(id).orElse(null);
+       return  this.studentRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 }

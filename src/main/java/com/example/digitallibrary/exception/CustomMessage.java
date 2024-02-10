@@ -1,5 +1,6 @@
 package com.example.digitallibrary.exception;
 
+import com.example.digitallibrary.enumeration.ErrorMessage;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import org.springframework.http.HttpStatus;
 public class CustomMessage {
     private Integer statusCode;
     @Enumerated(EnumType.STRING)
-    private ErrorMessage  message;
+    private ErrorMessage message;
     private String customMessage;
 
     public CustomMessage(){

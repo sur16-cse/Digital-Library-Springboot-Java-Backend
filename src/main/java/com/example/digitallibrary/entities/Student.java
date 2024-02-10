@@ -21,11 +21,16 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     private String name;
+
     private String email;
+
     private Integer age;
+
     @Column(name = "roll_no")
     private String rollNo;
+
     private String mobile;
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -34,6 +39,7 @@ public class Student {
 
     @CreationTimestamp
     private Date createdOn;
+
     @UpdateTimestamp
     private Date updatedOn;
 }

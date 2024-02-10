@@ -1,4 +1,4 @@
-package com.example.digitallibrary.exception;
+package com.example.digitallibrary.enumeration;
 
 public enum ErrorMessage {
     DATA_CREATED,

@@ -25,16 +25,14 @@ public class Book {
 
     //to check book availability
     @ManyToOne
+    @JoinColumn
     private Student student;
 
     @ManyToMany
     @JoinTable(name = "book_author", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> author;
 
-    @OneToMany
-    private Set<Transaction> transactions;
-
-    @Enumerated(value=EnumType.ORDINAL)
+    @Enumerated(value = EnumType.ORDINAL)
     private Genre genre;
 
     @CreationTimestamp

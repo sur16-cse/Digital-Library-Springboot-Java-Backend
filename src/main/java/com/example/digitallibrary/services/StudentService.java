@@ -19,7 +19,6 @@ StudentRepository studentRepository;
         studentRepository.save(student);
     }
 
-
     public Student get(Integer id) {
        return  this.studentRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }

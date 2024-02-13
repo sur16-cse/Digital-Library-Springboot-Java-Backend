@@ -22,7 +22,7 @@ public class Transaction {
     private Integer id;
 
     @ManyToOne
-    private Card card;
+    private Student student;
 
     @ManyToOne
     private Book book;
@@ -38,6 +38,6 @@ public class Transaction {
     @Enumerated(value = EnumType.ORDINAL)
     private TransactionStatus transactionStatus;
 
+    @Enumerated(value = EnumType.ORDINAL)
     private TransactionType transactionType;
-
 }

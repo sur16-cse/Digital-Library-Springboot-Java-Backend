@@ -37,9 +37,9 @@ public class Card {
     @Max(3)
     private int totalIssuedBook;
 
-    @OneToOne(mappedBy = "card")
-    @JsonIgnore
-    private Student student;
+//    @OneToOne(mappedBy = "card")
+//    @JsonIgnore
+//    private Student student;
 
 //    @OneToMany(mappedBy = "card")
 //    @JsonIgnore

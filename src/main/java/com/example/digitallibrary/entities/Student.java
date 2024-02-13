@@ -10,6 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.validation.annotation.Validated;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -40,6 +41,7 @@ public class Student {
     @CreationTimestamp
     private Date createdOn;
 
-    @UpdateTimestamp
-    private Date updatedOn;
+    @OneToMany(mappedBy = "student")
+    private List<Book> bookList;
+
 }
